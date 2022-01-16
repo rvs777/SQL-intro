@@ -24,4 +24,5 @@
 -- | Billy      | Hamilton  |
 -- | Ian        | Happ      |
 
-
+SELECT first_name, last_name, year FROM players INNER JOIN teams ON players.id = teams.id WHERE name = 'Chicago Cubs' AND year = 2020
+-- 
