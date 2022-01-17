@@ -7,5 +7,6 @@
 -- +---------------+------------+-----------+-----------+
 
 SELECT name, first_name, last_name, MAX(home_runs)
-FROM teams INNER JOIN players ON teams.id = players.id
-INNER JOIN stats ON teams.id = stats.team_id WHERE year = 2019
+FROM stats 
+INNER JOIN players ON stats.player_id = players.id
+INNER JOIN teams ON teams.id = stats.team_id WHERE year = 2019
